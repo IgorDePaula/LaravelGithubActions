@@ -24,7 +24,7 @@ jobs:
       - name: Run Laravel Server
         run: php artisan serve > /dev/null 2>&1 &
       - name: Run dusk tests
-        run: php artisan dusk
+        run: ./vendor/bin/phpunit
 
   dusk-php-73:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
       - name: Run Laravel Server
         run: php artisan serve > /dev/null 2>&1 &
       - name: Run dusk tests
-        run: php artisan dusk
+        run: ./vendor/bin/phpunit
 
   dusk-php-72:
     runs-on: ubuntu-latest
@@ -68,7 +68,7 @@ jobs:
       - name: Run Laravel Server
         run: php artisan serve > /dev/null 2>&1 &
       - name: Run dusk tests
-        run: php artisan dusk
+        run: ./vendor/bin/phpunit
 
   dusk-host:
     runs-on: ubuntu-latest
@@ -91,4 +91,4 @@ jobs:
       - name: Run Laravel Server
         run: php artisan serve > /dev/null 2>&1 &
       - name: Run dusk tests
-        run: php artisan dusk
+        run: ./vendor/bin/phpunit
